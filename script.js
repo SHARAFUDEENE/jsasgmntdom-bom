@@ -15,9 +15,25 @@ function changecolor() {
 
 // QUESTION 3
 
-function submit(){
-    const firstName=document.getElementById("form1").document.getElementById("fname").value;
-const lastName=document.getElementById("form1").getElementById("lname").value;
-console.log("The First Name is: ", firstName)
-console.log("The Second Name is : ",secondName)
+function submitForm() {
+    const firstName = document.getElementById("fname").value;
+    const lastName = document.getElementById("lname").value;
+
+    console.log("The First Name is: ", firstName);
+    console.log("The Last Name is : ", lastName);
+
+    const data = document.createElement("h3");
+    data.id='hthree'
+    data.innerHTML = "Your First Name is: " + firstName;
+    document.getElementById('hthree').appendChild(data);
+
+    const data2 = document.createElement("h3");
+    data2.id='hthree'
+    data2.innerHTML = "Your Last Name is: " + lastName;
+    document.getElementById('hthree').appendChild(data2);
+
+    // Return false to prevent the form from submitting in the traditional way
+    // return false;
 }
+
+// QUESTION 4
